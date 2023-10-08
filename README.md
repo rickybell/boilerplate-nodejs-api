@@ -51,7 +51,7 @@ Basically development and tests.
 or 
 "start": "nodemon src/ap.ts"
 ```
-*** Two ways, if you are using type-script you can use ts-node para rodar ou o bom e velho nodemon.***
+*Two ways, if you are using type-script you can use ts-node para rodar ou o bom e velho nodemon.*
 
 ###Tests
 ``````
