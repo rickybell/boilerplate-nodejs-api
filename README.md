@@ -21,7 +21,7 @@ There is a script written in Bash script to generate the framework, add packages
 - path
 - save-dev
 
-## Dev Dependencies 
+## Dev Dependencies
 - @types/config
 - @types/express
 - @types/jasmine
@@ -39,3 +39,23 @@ There is a script written in Bash script to generate the framework, add packages
 - ts-node
 - ts-node-dev
 - typescript
+
+## Run scripts
+
+We can run the project in different ways
+Basically development and tests.
+
+### Development
+```
+"dev": "ts-node-dev --exit-child src/app.ts",
+```
+or 
+```
+"start": "nodemon src/ap.ts"
+```
+*** Two ways, if you are using type-script you can use ts-node para rodar ou o bom e velho nodemon.***
+
+### Tests
+```
+"test": "NODE_ENV=default_test jest --no-cache --verbose",	
+```
