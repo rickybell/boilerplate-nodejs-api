@@ -48,14 +48,11 @@ Basically development and tests.
 ### Development
 ```
 "dev": "ts-node-dev --exit-child src/app.ts",
-```
 or 
-```
 "start": "nodemon src/ap.ts"
 ```
-*Two ways, if you are using type-script you can use ts-node para rodar ou o bom e velho nodemon.*
+*** Two ways, if you are using type-script you can use ts-node para rodar ou o bom e velho nodemon.***
 
-### Tests
-```
+###Tests
+``````
 "test": "NODE_ENV=default_test jest --no-cache --verbose",	
-```
