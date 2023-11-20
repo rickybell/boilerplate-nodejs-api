@@ -3,6 +3,7 @@ import { AdapterResponse, BaseHttpClient, RequestOptions } from "../../../src/ap
 import { AxiosHttpClient } from "../../../src/app/adapters/httpClient/axiosHttpClient"
 import { Post } from "../../../src/app/infrastructure/entity/post"
 import { AdapterError } from "../../../src/app/exception/adapters/adapterError"
+import { describe, expect, it } from "@jest/globals"
 
 describe("PostsService", () => {
     describe("getPostsById", () => {

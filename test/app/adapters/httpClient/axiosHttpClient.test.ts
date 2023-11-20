@@ -2,6 +2,7 @@ import { AxiosHttpClient } from "../../../../src/app/adapters/httpClient/axiosHt
 import axios from "axios"
 import { Post } from "../../../../src/app/infrastructure/entity/post"
 import { AdapterResponse } from "../../../../src/app/adapters/httpClient"
+import { describe, expect, it, jest } from '@jest/globals';
 
 jest.mock('axios')
 const mockedAxios = axios as jest.Mocked<typeof axios>
@@ -16,7 +17,7 @@ describe("AxiosHttpClient", () => {
             post.title = 'xxxx'
             post.body = 'xxxx'
 
-            mockedAxios.get.mockRejectedValue({
+            mockedAxios.get.mockResolvedValue({
                 status: 200,
                 data: post
             } as AdapterResponse<Post>

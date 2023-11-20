@@ -25,7 +25,7 @@ export class SetupServer extends Server {
     }
 
     private setupListen(): void {
-        this.app.listen(this.port, () => console.log(`The server is listning on port ${this.port}`))
+        this.app.listen(this.port, () => console.log(`The server is listening on port ${this.port}`))
     }
 
     private setupControllers(): void {
