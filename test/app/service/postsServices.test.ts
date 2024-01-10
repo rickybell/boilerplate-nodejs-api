@@ -31,7 +31,7 @@ describe("PostsService", () => {
                 expect(result.data.title).toEqual("xxxx")
             })
         })
-        it('should return an Error when ', async () => {
+        it('should return an Error when post doesn\'t found.', async () => {
             const post = new Post();
             post.id = 1
             post.title = 'xxxx'
@@ -51,9 +51,11 @@ describe("PostsService", () => {
                 }
                 const postsService = new PostsService(adapterFake)
 
-                await postsService.getPostsById("1").then(result => {
-                    result = result as AdapterError
-                    expect(result.message).toEqual("Not Found")
+                await postsService.getPostsById("1").then(response => {
+                    response = response as AdapterError
+                    
+                    expect(response.status).toEqual(404)
+                    expect(response.message).toEqual("Not Found")
                 })
             } catch (error) {
                 expect(error).toEqual("error");
